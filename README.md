@@ -45,12 +45,17 @@ This is a simple Snake Game developed as a web application. The project demonstr
 └── script.js        # JavaScript for game logic
 
 ## Skills Demonstrated
+
 - **Web Development**: Utilized HTML, CSS, and JavaScript to create an interactive web application.
 - **Responsive Design**: Implemented a responsive layout using Bootstrap and ensured the game works on both desktop and mobile devices.
 - **Game Development**: Developed game logic including player input handling, collision detection, and game state management.
+
 ## Future Enhancements
+
 🚀 Add different levels of difficulty.
 🏆 Implement a high score feature.
 📱 Improve mobile controls for a better user experience.
-Author
+
+## Author
+
 Developed by Lee Sugano.
