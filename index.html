@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1 class="mb-4" id="title">Snake Game</h1>
+        <div class="row">
+            <div class="col-md-8">
+                <canvas id="gameCanvas" width="400" height="400" class="border"></canvas>
+                <div class="mt-3">
+                    <button id="startButton" class="btn btn-primary">Start Game</button>
+                </div>
+                <div class="mt-2">
+                    <p id="score">Score: 0</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="instructions" class="text-left">
+                    <h3>How to Play</h3>
+                    <p>Use the arrow keys or swipe on mobile to move the snake:</p>
+                    <ul>
+                        <li><strong>Left:</strong> Arrow Left / Swipe Left</li>
+                        <li><strong>Up:</strong> Arrow Up / Swipe Up</li>
+                        <li><strong>Right:</strong> Arrow Right / Swipe Right</li>
+                        <li><strong>Down:</strong> Arrow Down / Swipe Down</li>
+                    </ul>
+                    <p>The objective is to eat the yellow food blocks and grow the snake. Avoid hitting the walls or the snake's own body.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
