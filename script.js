@@ -33,9 +33,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.addEventListener('keydown', direction);
     startButton.addEventListener('click', startGame);
 
-    // Touch event listeners for mobile devices
-    canvas.addEventListener('touchstart', handleTouchStart, false);
-    canvas.addEventListener('touchmove', handleTouchMove, false);
+    canvas.addEventListener('touchstart', (event) => {
+        event.preventDefault();
+        handleTouchStart(event);
+    }, false);
+
+    canvas.addEventListener('touchmove', (event) => {
+        event.preventDefault();
+        handleTouchMove(event);
+    }, false);
 
     function handleTouchStart(event) {
         const firstTouch = event.touches[0];
@@ -55,14 +61,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const diffY = touchEndY - touchStartY;
 
         if (Math.abs(diffX) > Math.abs(diffY)) {
-            // Horizontal swipe
             if (diffX > 0 && d != 'LEFT') {
                 d = 'RIGHT';
             } else if (diffX < 0 && d != 'RIGHT') {
                 d = 'LEFT';
             }
         } else {
-            // Vertical swipe
             if (diffY > 0 && d != 'UP') {
                 d = 'DOWN';
             } else if (diffY < 0 && d != 'DOWN') {
@@ -70,7 +74,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         }
 
-        // Reset values
         touchStartX = 0;
         touchStartY = 0;
     }
